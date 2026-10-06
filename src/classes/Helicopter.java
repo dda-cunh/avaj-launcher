@@ -1,7 +1,5 @@
 package src.classes;
 
-import src.classes.AircraftFactory.AircraftType;
-
 public class Helicopter extends AFlyable
 {
 	public Helicopter(String name, Coordinate coords)

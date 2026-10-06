@@ -218,4 +218,47 @@ public class Utils
 		}
 		return (n);
 	}
+
+	/**
+     * Attempts to parse a given primitive numeric data type from a String
+     *
+     * @param    a          the input String containing the value
+     * @param    type       the target type for parsing 
+     * @return   NumericType parsed value or null if type is unsupported/unparseable
+     */
+    public static final <NumericType> NumericType stringToNumeric(String a,
+            Class<NumericType> type)
+    {
+        if (a == null || a.trim().isEmpty())
+            throw new IllegalArgumentException("Input string is null or empty");
+
+        try
+        {
+            String input = a.trim();
+            NumericType n;
+
+            if (type.equals(Double.class))
+                n = type.cast(Double.valueOf(input));
+            else if (type.equals(Float.class))
+                n = type.cast(Float.valueOf(input));
+            else if (type.equals(Integer.class))
+                n = type.cast(Integer.valueOf(input));
+            else if (type.equals(Long.class))
+                n = type.cast(Long.valueOf(input));
+            else if (type.equals(Short.class))
+                n = type.cast(Short.valueOf(input));
+            else if (type.equals(Byte.class))
+                n = type.cast(Byte.valueOf(input));
+            else
+            {
+				throw new IllegalArgumentException("Not a primitive numeric type");
+            }
+
+            return n;
+        }
+        catch (Exception ex)
+        {
+            throw new NumberFormatException("Failed to parse '" + a + "' as " + type.getSimpleName() + ": " + ex.getMessage());
+        }
+    }
 }

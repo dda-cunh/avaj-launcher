@@ -1,10 +1,20 @@
 package src.classes;
 
-import src.classes.AircraftFactory.AircraftType;
 import src.classes.WeatherTower.WeatherType;
 
 public abstract class	AFlyable
 {
+	enum AircraftType
+	{
+		HELICOPTER,
+		JETPLANE,
+		BALLOON;
+
+		public static AircraftType fromString(String value) {
+			return AircraftType.valueOf(value.toUpperCase());
+		}
+	}
+
 	private final Coordinate	SUN_EFFECT;
 	private final Coordinate	RAIN_EFFECT;
 	private final Coordinate	FOG_EFFECT;
@@ -54,7 +64,7 @@ public abstract class	AFlyable
 		return (_uuid);
 	}
 
-	public void applyCondition(WeatherType weather)
+	public void updateConditions(WeatherType weather)
 	{
 		switch (weather)
 		{

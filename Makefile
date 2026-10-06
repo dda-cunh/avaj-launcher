@@ -50,7 +50,7 @@ manifest:
 				echo 'Main-Class: $(MAIN_CLASS)' >> $(MANIFEST_F)
 
 run:			$(NAME)
-				java -jar $(NAME)
+				java -jar $(NAME) $(ARGS)
 
 list:			$(NAME)
 				jar tf $(NAME)
