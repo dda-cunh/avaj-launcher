@@ -1,6 +1,6 @@
-package src.classes;
+package avaj.classes;
 
-import src.classes.WeatherTower.WeatherType;
+import avaj.classes.WeatherProvider.WeatherType;
 
 public abstract class	AFlyable
 {

@@ -1,6 +1,6 @@
-package src.classes;
+package avaj.classes;
 
-import src.classes.AFlyable.AircraftType;
+import avaj.classes.AFlyable.AircraftType;
 
 public class	AircraftFactory
 {

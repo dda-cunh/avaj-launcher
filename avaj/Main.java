@@ -1,12 +1,10 @@
-package src;
-
-// import java.util.Random;
-
-import src.classes.*;
+package avaj;
 
 import static inc.Utils.*;
 
 import java.io.InputStream;
+
+import avaj.classes.*;
 
 public class Main
 {
@@ -49,7 +47,7 @@ public class Main
 				break ;
 
 			try {
-				AFlyable flyable = AircraftFactory.newAircraft(line);
+				AFlyable flyable = AircraftFactory.getInstance().newAircraft(line);
 				if (flyable != null)
 					flyable.registerTower(WeatherTower.getInstance());
 			} catch (Exception ex) {

@@ -1,8 +1,8 @@
-package src.classes;
+package avaj.classes;
 
 import java.util.Map;
 
-import src.classes.WeatherTower.WeatherType;
+import avaj.classes.WeatherTower.WeatherType;
 
 public abstract class Tower
 {
@@ -28,7 +28,7 @@ public abstract class Tower
 		_observers.remove(flyable.getUUID());
 	}
 
-	void conditionsChanged(WeatherType weather)
+	void conditionChanged(WeatherType weather)
 	{
 		if (weather == null)
 			return ;

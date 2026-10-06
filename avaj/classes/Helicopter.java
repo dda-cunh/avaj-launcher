@@ -1,4 +1,4 @@
-package src.classes;
+package avaj.classes;
 
 public class Helicopter extends AFlyable
 {

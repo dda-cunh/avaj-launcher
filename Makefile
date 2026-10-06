@@ -9,7 +9,7 @@ RM 			= 	rm -rf
 
 OUT_DIR		=	temp/
 
-SRC_DIR		=	src/
+SRC_DIR		=	avaj/
 
 INC_DIR		=	inc/
 
